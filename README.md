@@ -36,8 +36,7 @@ python homographyapp.py image1.jpg image2.jpg --display-scale 0.5 --num-points 6
 
 ![App Screenshot](output%2Fhomography_chess.gif)
 
-<p align="center"> *Interactive homography application interface showing real-time point manipulation and transformation* </p>
-
+<p align="center"><i>Interactive homography application interface showing real-time point manipulation and transformation</i></p>
 
 1. **Place Points**: Click and drag correspondence points on both images
 2. **Adjust RANSAC**: Use the slider to change threshold (1-20 pixels) and control algorithm tolerance
