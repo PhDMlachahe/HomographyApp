@@ -1,13 +1,23 @@
-# Homography Point Selector
-Interactive tool for homography transformation experiments using OpenCV
+<div align="center">
+<h1 align="center">Homography Point Selector</h1>
+
+  <p align="center">
+    Interactive tool for homography transformation experiments using OpenCV
+  </p>
+
+</div>
 
 ## Overview
 
 Homography is a fundamental computer vision technique that relates corresponding points between two views of the same planar surface. This interactive application lets you manually select correspondence points to experiment with homography transformations and observe their effects in real-time. While real-world applications typically use automatic feature detection algorithms (SIFT, ORB, Harris corners), manual selection provides better insight into how point correspondences affect geometric transformations.
 
+<p align="center">
+  <img src="images/homography_two_planes.jpg" alt="homography_two_planes"/>
+</p>
+
 For detailed mathematical foundations and comprehensive analysis of homography transformations, refer to the complete article: [📰 Homography Transformations in Practice](https://medium.com/wanabilini/homography-transformations-in-practice-974c9e2730b2)
 
-## Usage
+## Code Execution
 
 ### Basic Launch
 ```bash
@@ -22,9 +32,10 @@ python homographyapp.py image1.jpg image2.jpg --display-scale 0.5 --num-points 6
 - `--num-points, -n`: Number of correspondence points (minimum 4, default: 4)
 - `--ransac-threshold, -r`: RANSAC threshold in pixels (1-20, default: 5)
 
-## How to Use
+### How to Use
 
-*Figure 7: Interactive homography application interface showing real-time point manipulation and transformation*
+![App Screenshot](output%2Fhomography_chess.gif)
+*Interactive homography application interface showing real-time point manipulation and transformation*
 
 1. **Place Points**: Click and drag correspondence points on both images
 2. **Adjust RANSAC**: Use the slider to change threshold (1-20 pixels) and control algorithm tolerance
@@ -36,7 +47,7 @@ python homographyapp.py image1.jpg image2.jpg --display-scale 0.5 --num-points 6
 5. **Reset**: Press 'r' to reset points
 6. **Quit**: Press 'q' to exit
 
-## Interface Windows
+### Interface Windows
 
 - **Img1 - Source Points**: Reference image with correspondence points
 - **Img2 - Destination Points**: Image to be transformed with correspondence points  
@@ -47,28 +58,22 @@ python homographyapp.py image1.jpg image2.jpg --display-scale 0.5 --num-points 6
 
 ## Example Results
 
-### Document Rectification (Book)
-- **Configuration**: 4 corner points, 5px threshold
-- **Outcome**: Perfect document rectification suitable for scanning applications
-
-### Structured Pattern Analysis (Chess Board)
-- **Configuration**: 6 border points, 1px strict threshold
-- **Outcome**: 4/6 inliers, demonstrates RANSAC sensitivity to precise placement
-
-### Architectural Transformation (Arc de Triomphe)
-
-**Concentrated Points Experiment**
-- 8 points on single pillar: Only local region aligns correctly
-- 8 points on central reliefs: Limited regional accuracy
-
-**Distributed Points Experiment**
-- 8 points across entire structure: Global alignment across monument
-
-### Sports Analytics (Football Stadium)
-
-**Basic vs Enhanced Point Distribution**
-- 6 points (central coverage): Adequate basic transformation
-- 10 points (perimeter coverage): Precise boundary alignment with stadium exclusion
+The following demonstrations showcase practical applications of homography transformations across different scenarios.
+<p align="center">
+  <img src="output/chessboard_chess1_homography_exemple.png" alt="chessboard_chess1_homography"/>
+</p>
+<p align="center">
+  <img src="output/arc1_arc2_homography_exemple3.png" alt="arc1_arc2_homography"/>
+</p>
+<p align="center">
+  <img src="output/arcrohff_arc1_homography_exemple.png" alt="arcrohff_arc1_homography"/>
+</p>
+<p align="center">
+  <img src="output/football_background_football2_homography_exemple.png" alt="football_background_football2_homography"/>
+</p>
+<p align="center">
+  <img src="output/football_background_football1_homography_exemple2.png" alt="football_background_football1_homography"/>
+</p>
 
 ## Contact
 
