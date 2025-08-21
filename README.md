@@ -1,5 +1,5 @@
 <div align="center">
-<h1 align="center">Homography Point Selector</h1>
+<h1 align="center">Homography Point Selector Application</h1>
 
   <p align="center">
     Interactive tool for homography transformation experiments using OpenCV
@@ -12,7 +12,7 @@
 Homography is a fundamental computer vision technique that relates corresponding points between two views of the same planar surface. This interactive application lets you manually select correspondence points to experiment with homography transformations and observe their effects in real-time. While real-world applications typically use automatic feature detection algorithms (SIFT, ORB, Harris corners), manual selection provides better insight into how point correspondences affect geometric transformations.
 
 <p align="center">
-  <img src="images/homography_two_planes.jpg" alt="homography_two_planes"/>
+  <img src="images/homography_two_planes.jpg" alt="homography_two_planes" width="60%"/>
 </p>
 
 For detailed mathematical foundations and comprehensive analysis of homography transformations, refer to the complete article: [📰 Homography Transformations in Practice](https://medium.com/wanabilini/homography-transformations-in-practice-974c9e2730b2)
@@ -35,7 +35,9 @@ python homographyapp.py image1.jpg image2.jpg --display-scale 0.5 --num-points 6
 ### How to Use
 
 ![App Screenshot](output%2Fhomography_chess.gif)
-*Interactive homography application interface showing real-time point manipulation and transformation*
+
+<p align="center"> *Interactive homography application interface showing real-time point manipulation and transformation* </p>
+
 
 1. **Place Points**: Click and drag correspondence points on both images
 2. **Adjust RANSAC**: Use the slider to change threshold (1-20 pixels) and control algorithm tolerance
